@@ -3,7 +3,7 @@
     margin: 0;
 }
 
-.navbar{
+.navbar-container{
     display: flex;
     justify-content: space-around;
     min-height: 15vh;
@@ -15,7 +15,6 @@
 
 .navtitle{
     font-size: 25px;
-    
 }
 
 .navlinks-left, .navlinks-right{
@@ -25,13 +24,108 @@
     width: 40%;
 }
 
-a{
+.navbar-container a{
+    text-decoration: none;
+    color: black;
+    font-size: 15px;
+}
+
+.navbar-container a:hover{
     text-decoration: none;
     color: black;
 }
 
+/* bootstrap carousel */
 .top-container{
-    height: 84.5vh;
+    height: 95vh;
     width: 100%;
-    background: radial-gradient(rgb(197, 184, 184), #c58c85);
+    background: radial-gradient(rgb(197, 184, 184), #EEF384);
+    padding-top: 50px;
+}
+
+.carousel-container{
+    width: 65%;
+    margin: auto;
+    height: 500px;
+}
+
+.item img{
+    width:100%;
+    height: 550px;
+    transition: 0.4s;
+    /* opacity: 0.5; */
+    filter: brightness(40%);
+}
+
+/* caption for men fashion */
+.item .carousel-caption{
+    position: absolute;
+    bottom: 50%;
+    transform: translateY(50%);
+}
+
+.carousel-caption button{
+    padding: 10px;
+    border-radius: 14px;
+    border: 1px solid white;
+    background: transparent;
+    color: white;
+    transition: 0.5s;
+    outline: none;
+}
+
+.carousel-caption button:hover{
+    border: 1px solid rgb(66, 65, 65);
+    background-color: rgb(212, 209, 209);
+    color: rgb(66,65,65);
+}
+
+
+/* Spring section */
+.spring-section h1{
+    text-align: center;
+}
+
+.spring-content{
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 50px;
+}
+
+.spring-content img{
+    height: 400px;
+}
+
+.spring-content .image-container{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+}
+
+.spring-content .picture{
+    position: absolute;
+}
+
+.spring-content button{
+    padding: 10px;
+    border-radius: 14px;
+    background: transparent;
+    transition: 0.5s;
+    outline: none;
+}
+
+@keyframes fade-in{
+    from{
+        opacity: 0;
+    }to{
+        opacity: 1;
+    }
+}
+
+@keyframes fade-out{
+    from{
+        opacity: 1;
+    }to{
+        opacity: 0;
+    }
 }
