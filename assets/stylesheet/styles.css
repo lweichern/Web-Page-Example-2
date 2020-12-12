@@ -93,7 +93,7 @@
     padding: 30px 0px;
     height: 600px;
     background: none;
-    background: linear-gradient(to bottom right, rgb(121, 236, 121), rgb(255, 243, 243));
+    background: linear-gradient(to bottom, rgb(121, 236, 121),#f6ff42);
     box-shadow: 0px -4px 3px gray;
 }
 
@@ -212,10 +212,11 @@
 
 /* Summer section */
 .summer-section{
+    border-top: 1px solid black;
     padding: 30px 0px;
     height: 600px;
     background: none;
-    background: linear-gradient(to bottom right, #f6ff42, rgb(255, 243, 243));
+    background: linear-gradient(to bottom, #f6ff42,#ad524a);
 }
 
 .summer-section h1{
@@ -301,10 +302,11 @@
 
 /* Autumn section */
 .autumn-section{
+    border-top: 1px solid black;
     padding: 30px 0px;
     height: 600px;
     background: none;
-    background: linear-gradient(to bottom right, #ad524a, rgb(255, 243, 243));
+    background: linear-gradient(to bottom, #ad524a, #70d3f7);
 }
 
 .autumn-section h1{
@@ -390,10 +392,11 @@
 
 /* Winter section */
 .winter-section{
+    border-top: 1px solid black;
     padding: 30px 0px;
     height: 600px;
     background: none;
-    background: linear-gradient(to bottom right, #70d3f7, rgb(255, 243, 243));
+    background: linear-gradient(to bottom, #70d3f7, rgb(255, 243, 243));
 }
 
 .winter-section h1{
