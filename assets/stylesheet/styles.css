@@ -11,6 +11,7 @@
     border-bottom: 1px solid black;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     /* background: linear-gradient(to bottom,#d1a3a4, white); */
+    box-shadow: 0 10px 5px -5px gray;
 }
 
 .navtitle{
@@ -39,19 +40,24 @@
 .top-container{
     height: 95vh;
     width: 100%;
-    background: radial-gradient(rgb(197, 184, 184), #EEF384);
+    /* background: radial-gradient(rgb(197, 184, 184), #c58c85); */
     padding-top: 50px;
 }
 
 .carousel-container{
     width: 65%;
     margin: auto;
-    height: 500px;
+    height: 470px;
+    box-shadow: 5px 5px 5px gray;
+}
+
+#myCarousel{
+    height: 400px;
 }
 
 .item img{
     width:100%;
-    height: 550px;
+    height: 400px;
     transition: 0.4s;
     /* opacity: 0.5; */
     filter: brightness(40%);
@@ -82,6 +88,15 @@
 
 
 /* Spring section */
+.spring-section{
+    margin-top: 40px;
+    padding: 30px 0px;
+    height: 600px;
+    background: none;
+    background: linear-gradient(to bottom right, rgb(121, 236, 121), rgb(255, 243, 243));
+    box-shadow: 0px -4px 3px gray;
+}
+
 .spring-section h1{
     text-align: center;
 }
@@ -100,6 +115,7 @@
     width: 50%;
     display: flex;
     flex-direction: column;
+    cursor: pointer;
 }
 
 .spring-content .picture{
@@ -112,6 +128,69 @@
     background: transparent;
     transition: 0.5s;
     outline: none;
+    border: 1px solid black;
+}
+
+.spring-content button:hover{
+    border: 1px solid rgb(167, 164, 164);
+    background-color: rgb(167, 164, 164);
+    color: white;
+}
+
+/* Flowers animation */
+.flowers{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    position: absolute;
+}
+
+.flowers img{
+    width: 100px;
+    animation: object-animate 7s linear infinite;
+    opacity: 0;
+}
+
+@keyframes object-animate{
+    0%{
+        opacity: 0;
+    }
+    50%{
+        opacity: 1;
+    }
+    70%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+        transform: translateY(550px);
+    }
+}
+
+.flowers img:nth-child(1){
+    animation-delay: 1.8s;
+    width: 70px;
+}
+.flowers img:nth-child(2){
+    animation-delay: 2.5s;
+    width: 85px;
+}
+.flowers img:nth-child(3){
+    animation-delay: 6s;
+    width: 67px;
+}
+.flowers img:nth-child(4){
+    animation-delay: 4.5s;
+    width: 80px;
+}
+.flowers img:nth-child(5){
+    animation-delay: 3.4s;
+    width: 100px;
+}
+.flowers img:nth-child(6){
+    animation-delay: 7s;
+    width: 90px;
 }
 
 @keyframes fade-in{
@@ -128,4 +207,274 @@
     }to{
         opacity: 0;
     }
+}
+
+
+/* Summer section */
+.summer-section{
+    padding: 30px 0px;
+    height: 600px;
+    background: none;
+    background: linear-gradient(to bottom right, #f6ff42, rgb(255, 243, 243));
+}
+
+.summer-section h1{
+    text-align: center;
+}
+
+.summer-content{
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 50px;
+}
+
+.summer-content img{
+    height: 400px;
+}
+
+.summer-content .image-container{
+    width: 45%;
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.summer-content .picture{
+    position: absolute;
+}
+
+.summer-content button{
+    padding: 10px;
+    border-radius: 14px;
+    background: transparent;
+    transition: 0.5s;
+    outline: none;
+    border: 1px solid black;
+}
+
+.summer-content button:hover{
+    border: 1px solid rgb(167, 164, 164);
+    background-color: rgb(167, 164, 164);
+    color: white;
+}
+
+
+/* Animate summer items */
+.summer-item{
+    width: 100%;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.summer-item img{
+    width: 50px;
+    animation: object-animate 7s linear infinite;
+    opacity: 0;
+}
+
+.summer-item img:nth-child(1){
+    animation-delay: 1.8s;
+    width: 50px;
+}
+.summer-item img:nth-child(2){
+    animation-delay: 2.5s;
+    width: 40px;
+}
+.summer-item img:nth-child(3){
+    animation-delay: 6s;
+    width: 67px;
+}
+.summer-item img:nth-child(4){
+    animation-delay: 4.5s;
+    width: 60px;
+}
+.summer-item img:nth-child(5){
+    animation-delay: 3.4s;
+    width: 45px;
+}
+.summer-item img:nth-child(6){
+    animation-delay: 7s;
+    width: 62px;
+}
+
+/* Autumn section */
+.autumn-section{
+    padding: 30px 0px;
+    height: 600px;
+    background: none;
+    background: linear-gradient(to bottom right, #ad524a, rgb(255, 243, 243));
+}
+
+.autumn-section h1{
+    text-align: center;
+}
+
+.autumn-content{
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 50px;
+}
+
+.autumn-content img{
+    height: 400px;
+}
+
+.autumn-content .image-container{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.autumn-content .picture{
+    position: absolute;
+}
+
+.autumn-content button{
+    padding: 10px;
+    border-radius: 14px;
+    background: transparent;
+    transition: 0.5s;
+    outline: none;
+    border: 1px solid black;
+}
+
+.autumn-content button:hover{
+    border: 1px solid rgb(167, 164, 164);
+    background-color: rgb(167, 164, 164);
+    color: white;
+}
+
+
+/* Animate autumn leaves */
+.autumn-leaves{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    position: absolute;
+    width: 100%;
+}
+
+.autumn-leaves img{
+    width: 50px;
+    animation: object-animate 7s linear infinite;
+    opacity: 0;
+}
+
+.autumn-leaves img:nth-child(1){
+    animation-delay: 1.8s;
+    width: 40px;
+}
+.autumn-leaves img:nth-child(2){
+    animation-delay: 2.5s;
+    width: 45px;
+}
+.autumn-leaves img:nth-child(3){
+    animation-delay: 6s;
+    width: 61px;
+}
+.autumn-leaves img:nth-child(4){
+    animation-delay: 4.5s;
+    width: 60px;
+}
+.autumn-leaves img:nth-child(5){
+    animation-delay: 3.4s;
+    width: 50px;
+}
+.autumn-leaves img:nth-child(6){
+    animation-delay: 7s;
+    width: 70px;
+}
+
+/* Winter section */
+.winter-section{
+    padding: 30px 0px;
+    height: 600px;
+    background: none;
+    background: linear-gradient(to bottom right, #70d3f7, rgb(255, 243, 243));
+}
+
+.winter-section h1{
+    text-align: center;
+}
+
+.winter-content{
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 50px;
+}
+
+.winter-content img{
+    height: 400px;
+}
+
+.winter-content .image-container{
+    width: 45%;
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.winter-content .picture{
+    position: absolute;
+}
+
+.winter-content button{
+    padding: 10px;
+    border-radius: 14px;
+    background: transparent;
+    transition: 0.5s;
+    outline: none;
+    border: 1px solid black;
+}
+
+.winter-content button:hover{
+    border: 1px solid rgb(167, 164, 164);
+    background-color: rgb(167, 164, 164);
+    color: white;
+}
+
+.winter-section .img-4 img{
+    width: 600px;
+}
+
+.snowflakes{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    position: absolute;
+}
+
+.snowflakes img{
+    width: 50px;
+    animation: object-animate 7s linear infinite;
+    opacity: 0;
+}
+
+.snowflakes img:nth-child(1){
+    animation-delay: 1.8s;
+    width: 40px;
+}
+.snowflakes img:nth-child(2){
+    animation-delay: 2.5s;
+    width: 45px;
+}
+.snowflakes img:nth-child(3){
+    animation-delay: 6s;
+    width: 61px;
+}
+.snowflakes img:nth-child(4){
+    animation-delay: 4.5s;
+    width: 60px;
+}
+.snowflakes img:nth-child(5){
+    animation-delay: 3.4s;
+    width: 50px;
+}
+.snowflakes img:nth-child(6){
+    animation-delay: 7s;
+    width: 70px;
 }
