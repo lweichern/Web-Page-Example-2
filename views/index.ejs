@@ -7,44 +7,18 @@
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
         <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+        <link rel="stylesheet" href="../assets/stylesheet/navbar.css">
     </head>
 
     <body>
-        <nav class="navbar-container">
-            <ul class="navlinks-left" data-aos="zoom-in-down" data-aos-duration="1200">
-                <li>
-                    <a href="">Men</a>
-                </li>
-                <li>
-                    <a href="">Women</a>
-                </li>
-                <li>
-                    <a href="">Kids</a>
-                </li>
-                <li>
-                    <a href="">Accesories</a>
-                </li>
-            </ul>
+        <%- include ('navbar.ejs') -%>
 
-            <div class="navtitle" data-aos="flip-left" data-aos-duration="1200"> 
-                NAVBAR
-            </div>
-
-            <ul class="navlinks-right" data-aos="zoom-in-up" data-aos-duration="1200">
-                <li>
-                    <a href="">Newsletter</a>
-                </li>
-                <li>
-                    <a href="">Magazines</a>
-                </li>
-                <li>
-                    <a href="">Others</a>
-                </li>
-                <li>
-                    <a href="">Contact Us</a>
-                </li>
-            </ul>
-        </nav>
+        <!-- Dark Mode button -->
+        <div class="mode-button" data-aos="fade-in" data-aos-duration="1200" data-aos-delay="1200">
+            <input type="checkbox">
+            <i class="fas fa-power-off"></i>
+        </div>
         
         <!-- bootstrap carousel -->
         <div class="top-container">
@@ -58,13 +32,13 @@
                       <li data-target="#myCarousel" data-slide-to="3"></li>
                     </ol>
                 
-                    <div class="carousel-inner" style="width: 100%; margin-left: auto; margin-right: auto; transition: 0.4s;">
+                    <div class="carousel-inner inverted" style="width: 100%; margin-left: auto; margin-right: auto; transition: 0.4s;">
                 
                       <div class="item active men-fashion">
                         <img src="/assets/images/men-fashion.jpg" alt="Men Fashion" style="width:100%;height: 470px;transition: 0.4s;">
                         <div class="carousel-caption">
                             <h1 class="caption" data-aos="fade-right" data-aos-duration="800" data-aos-delay="1200">Men Fashion</h1>
-                            <a href=""><button data-aos="fade-left" data-aos-duration="800" data-aos-delay="1200">Check it out</button></a>
+                            <a href="/men-fashion"><button data-aos="fade-left" data-aos-duration="800" data-aos-delay="1200">Check it out</button></a>
                         </div>
                       </div>
                 
@@ -105,6 +79,42 @@
                     </a>
                   </div>
             </div>
+            <div class="men-clothings">
+                <ul>
+                    <li>New Arrivals</li>
+                    <li>T-shirts & Polo</li>
+                    <li>Jerseys</li>
+                    <li>Hoodies & Track Tops</li>
+                    <li>Jackets</li>
+                    <li>Pants</li>
+                    <li>Tights</li>
+                    <li>Shorts</li>
+                </ul>
+            </div>
+            <div class="women-clothings">
+                <ul>
+                    <li>New Arrivals</li>
+                    <li>T-shirts & Polo</li>
+                    <li>Jerseys</li>
+                    <li>Hoodies & Track Tops</li>
+                    <li>Jackets</li>
+                    <li>Pants</li>
+                    <li>Tights</li>
+                    <li>Shorts</li>
+                </ul>
+            </div>
+            <div class="kids-clothings">
+                <ul>
+                    <li>New Arrivals</li>
+                    <li>T-shirts & Polo</li>
+                    <li>Jerseys</li>
+                    <li>Hoodies & Track Tops</li>
+                    <li>Jackets</li>
+                    <li>Pants</li>
+                    <li>Tights</li>
+                    <li>Shorts</li>
+                </ul>
+            </div>
         </div>
 
         <!-- Spring section -->
@@ -119,7 +129,7 @@
             </div>
             <h1 data-aos="zoom-in" data-aos-duration="1200">Feel the Spring in us</h1>
             <div class="spring-content">
-                <div class="image-container" data-aos="fade-right" data-aos-duration="1200">
+                <div class="image-container inverted" data-aos="fade-right" data-aos-duration="1200">
                     <div class="picture img-1">
                         <img src="/assets/images/spring-1.jpg" alt="Spring Image 1">  
                     </div>
@@ -156,7 +166,7 @@
                     <button>Shop Now</button>
                     <h5>Click the photo for surprise >></h5>
                 </div>
-                <div class="image-container" data-aos="fade-right" data-aos-duration="1200">
+                <div class="image-container inverted" data-aos="fade-right" data-aos-duration="1200">
                     <div class="picture img-1">
                         <img src="/assets/images/summer-1.jpg" alt="Summer Image 1">  
                     </div>
@@ -186,7 +196,7 @@
             <h1 data-aos="zoom-in" data-aos-duration="1200">Feel the Autumn in us</h1>
 
             <div class="autumn-content">
-                <div class="image-container" data-aos="fade-right" data-aos-duration="1200">
+                <div class="image-container inverted" data-aos="fade-right" data-aos-duration="1200">
                     <div class="picture img-1">
                         <img src="/assets/images/autumn-1.jpg" alt="Autumn Image 1">  
                     </div>
@@ -220,6 +230,19 @@
                 <img src="../assets/images/snowflake-3.png" alt="Autumn Leaves 3">
                 <img src="../assets/images/snowflake-1.png" alt="Autumn Leaves 1">
             </div>
+            <div class="snow inverted">
+                <span>.</span>
+                <span>.</span>
+                <span>.</span>
+                <span>.</span>
+                <span>.</span>
+                <span>.</span>
+                <span>.</span>
+                <span>.</span>
+                <span>.</span>
+                <span>.</span>
+                <span>.</span>
+            </div>
             <h1 data-aos="zoom-in" data-aos-duration="1200">Feel the Winter in us</h1>
             <div class="winter-content">
                 <div class="description" data-aos="fade-left" data-aos-duration="1200">
@@ -227,7 +250,7 @@
                     <button>Shop Now</button>
                     <h5>Click the photo for surprise >></h5>
                 </div>
-                <div class="image-container" data-aos="fade-right" data-aos-duration="1200">
+                <div class="image-container inverted" data-aos="fade-right" data-aos-duration="1200">
                     <div class="picture img-1">
                         <img src="/assets/images/winter-1.jpg" alt="Winter Image 1">  
                     </div>
@@ -252,6 +275,7 @@
             interval: false,
         });
     </script>
+    <script src="../assets/scripts/dark-mode.js"></script>
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script>
         AOS.init();

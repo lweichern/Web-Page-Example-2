@@ -10,5 +10,9 @@ app.get('/', (req, res) => {
     res.render('index');
 });
 
+app.get('/men-fashion', (req, res) => {
+    res.render('men-fashion');
+});
+
 app.listen('3100');
-console.log('listening to port 3000');
+console.log('listening to port 3100');

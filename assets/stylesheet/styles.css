@@ -3,41 +3,9 @@
     margin: 0;
 }
 
-.navbar-container{
-    display: flex;
-    justify-content: space-around;
-    min-height: 15vh;
-    align-items: center;
-    border-bottom: 1px solid black;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    /* background: linear-gradient(to bottom,#d1a3a4, white); */
-    box-shadow: 0 10px 5px -5px gray;
-}
-
-.navtitle{
-    font-size: 25px;
-}
-
-.navlinks-left, .navlinks-right{
-    display: flex;
-    justify-content: space-around;
-    list-style: none;
-    width: 40%;
-}
-
-.navbar-container a{
-    text-decoration: none;
-    color: black;
-    font-size: 15px;
-}
-
-.navbar-container a:hover{
-    text-decoration: none;
-    color: black;
-}
-
 /* bootstrap carousel */
 .top-container{
+    background-color: #dedede;
     height: 95vh;
     width: 100%;
     /* background: radial-gradient(rgb(197, 184, 184), #c58c85); */
@@ -52,7 +20,7 @@
 }
 
 #myCarousel{
-    height: 400px;
+    height: 470px;
 }
 
 .item img{
@@ -86,10 +54,125 @@
     color: rgb(66,65,65);
 }
 
+/* Men Clothings */
+.men-clothings{
+    width: 13%;
+    background-color: white;
+    position:absolute;
+    top: 10%;
+    opacity: 0;
+    padding: 10px 0px;
+    /* animation: men-clothing-animate 1s forwards ease-out; */
+}
+
+.men-clothings ul{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.men-clothings li{
+    list-style: none;
+    opacity: 0;
+}
+
+/* Men clothings Animation */
+@keyframes men-clothing-animate-in{
+    from{
+        top: 10%;
+        opacity: 0;
+    }to{
+        top: 15%;
+        opacity: 1;
+    }
+}
+
+@keyframes men-clothing-animate-out{
+    from{
+        top: 15%;
+        opacity: 1;
+    }to{
+        top: 10%;
+        opacity: 0;
+    }
+}
+
+.dropdown-active{
+    animation: men-clothing-animate-in 0.6s forwards linear;
+}
+
+.dropdown-inactive{
+    animation: men-clothing-animate-out 0.6s forwards linear;
+}
+
+.navbar-container .fas{
+    transition: 0.8s;
+}
+
+.arrow-animate{
+    transform: rotateX(180deg);
+}
+
+/* Women Clothings */
+.women-clothings{
+    width: 13%;
+    background-color: white;
+    position:absolute;
+    top: 10%;
+    left: 10%;
+    opacity: 0;
+    padding: 10px 0px;
+    /* animation: men-clothing-animate 1s forwards ease-out; */
+}
+
+.women-clothings ul{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.women-clothings li{
+    list-style-type: none;
+    opacity: 0;
+}
+
+/* Kids Clothings */
+.kids-clothings{
+    width: 13%;
+    background-color: white;
+    position:absolute;
+    top: 10%;
+    left: 20%;
+    opacity: 0;
+    padding: 10px 0px;
+    /* animation: men-clothing-animate 1s forwards ease-out; */
+}
+
+.kids-clothings ul{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    list-style-type: none;
+}
+
+.kids-clothings li{
+    list-style-type: none;
+    opacity: 0;
+}
+
+@keyframes dropdown-list-animation{
+    from{
+        opacity: 0;
+    }to{
+        opacity: 1;
+    }
+}
 
 /* Spring section */
 .spring-section{
-    margin-top: 40px;
     padding: 30px 0px;
     height: 600px;
     background: none;
@@ -480,4 +563,124 @@
 .snowflakes img:nth-child(6){
     animation-delay: 7s;
     width: 70px;
+}
+
+.snow{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    position: absolute;
+    width: 100%;
+    color: white;
+    font-size: 30px;
+}
+
+.snow span{
+    animation: object-animate 8s linear infinite;
+    opacity: 0;
+}
+
+.snow span:nth-child(1){
+    animation-delay: 1.8s;
+    font-size: 40px;
+}
+.snow span:nth-child(2){
+    animation-delay: 2.5s;
+    font-size: 45px;
+}
+.snow span:nth-child(3){
+    animation-delay: 6s;
+    font-size: 61px;
+}
+.snow span:nth-child(4){
+    animation-delay: 4.5s;
+    font-size: 60px;
+}
+.snow span:nth-child(5){
+    animation-delay: 3.4s;
+    font-size: 50px;
+}
+.snow span:nth-child(6){
+    animation-delay: 7s;
+    font-size: 70px;
+}
+.snow span:nth-child(7){
+    animation-delay: 8s;
+    font-size: 45px;
+}
+.snow span:nth-child(8){
+    animation-delay: 10s;
+    font-size: 61px;
+}
+.snow span:nth-child(9){
+    animation-delay: 3.9s;
+    font-size: 60px;
+}
+.snow span:nth-child(10){
+    animation-delay: 2s;
+    font-size: 50px;
+}
+.snow span:nth-child(11){
+    animation-delay: 1.8s;
+    font-size: 70px;
+}
+
+
+/* Dark mode */
+.dark-mode{
+    filter: invert(0.8) hue-rotate(180deg);
+}
+
+/* Prevent dark mode on pictures */
+.invert{
+    filter: invert(1) hue-rotate(180deg);
+}
+
+/* Dark-Light-Button */
+/* .mode-button{
+    position: absolute;
+    cursor: pointer;
+    padding: 12px 15px;
+    font-size: 20px;
+    border-radius: 50%;
+    border: 3px;
+    right: 5%;
+    top: 52%;
+    box-shadow:  20px 20px 30px #bdbdbd, 
+             -20px -20px 30px #ffffff;
+}
+
+.mode-button:checked{
+    box-shadow:  20px 20px 30px #bdbdbd, 
+             -20px -20px 30px #f1f1f1,
+             inset 20px 20px 30px #bdbdbd, 
+             inset -20px -20px 30px #f1f1f1;
+} */
+
+input[type = "checkbox"]{
+    height: 70px;
+    width: 70px;
+    border-radius: 50%;
+    box-shadow:  -20px -20px 30px #f1f1f1,
+                20px 20px 30px #bdbdbd;
+    -webkit-appearance: none;
+    right: 4%;
+    outline: none;
+    position: absolute;
+    top: 50%;
+    cursor: pointer;
+    border: 8px solid #dedede;
+}
+
+.mode-button i{
+    position: absolute;
+    right: 5.7%;
+    top: 54.2%;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+iframe{
+    width: 100%;
+    height: 500px;
 }
