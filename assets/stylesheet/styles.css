@@ -1,6 +1,27 @@
+@font-face{
+    font-family: 'TropicalAsian';
+    src: url('../fonts/LovelyHome-9aBZ.ttf') format('truetype');
+}
+
+@font-face{
+    font-family: 'GoodUnicorn';
+    src: url('../fonts/GoodUnicornRegular-Rxev.ttf') format('truetype');
+}
+
+@font-face{
+    font-family: 'LovelyHome';
+    src: url('../fonts/LovelyHome-9aBZ.ttf') format('truetype');
+}
+
+@font-face{
+    font-family: 'Moonglade';
+    src: url('../fonts/MoongladeDemoBold-jOzM.ttf') format('truetype');
+}
+
 *{
     padding: 0;
     margin: 0;
+    
 }
 
 /* bootstrap carousel */
@@ -8,8 +29,11 @@
     background-color: #dedede;
     height: 95vh;
     width: 100%;
-    /* background: radial-gradient(rgb(197, 184, 184), #c58c85); */
     padding-top: 50px;
+}
+
+.top-container h1{
+    font-family: 'TropicalAsian';
 }
 
 .carousel-container{
@@ -75,6 +99,7 @@
 .men-clothings li{
     list-style: none;
     opacity: 0;
+    font-family: 'GoodUnicorn';
 }
 
 /* Men clothings Animation */
@@ -136,6 +161,7 @@
 .women-clothings li{
     list-style-type: none;
     opacity: 0;
+    font-family: 'LovelyHome';
 }
 
 /* Kids Clothings */
@@ -161,6 +187,7 @@
 .kids-clothings li{
     list-style-type: none;
     opacity: 0;
+    font-family: 'Moonglade';
 }
 
 @keyframes dropdown-list-animation{
@@ -247,7 +274,7 @@
     }
     100%{
         opacity: 0;
-        transform: translateY(550px);
+        transform: translateY(480px);
     }
 }
 

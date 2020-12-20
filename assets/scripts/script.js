@@ -93,6 +93,18 @@ men.addEventListener('click', (event) => {
         men_dropdown.classList.remove('dropdown-inactive');
     }
 
+    if(women_dropdown.classList.contains('dropdown-active')){
+        women_dropdown.classList.add('dropdown-inactive');
+        women_dropdown.classList.remove('dropdown-active');
+        arrowWomen.classList.toggle('arrow-animate');
+    }
+
+    if(kids_dropdown.classList.contains('dropdown-active')){
+        kids_dropdown.classList.add('dropdown-inactive');
+        kids_dropdown.classList.remove('dropdown-active');
+        arrowKids.classList.toggle('arrow-animate');
+    }
+
     men_dropdown_list.forEach((elem,index) => {
         if(elem.style.animation){
             elem.style.animation = "";
@@ -118,6 +130,18 @@ women.addEventListener('click', (event) => {
         women_dropdown.classList.remove('dropdown-inactive');
     }
 
+    if(men_dropdown.classList.contains('dropdown-active')){
+        men_dropdown.classList.add('dropdown-inactive');
+        men_dropdown.classList.remove('dropdown-active');
+        arrowMen.classList.toggle('arrow-animate');
+    }
+
+    if(kids_dropdown.classList.contains('dropdown-active')){
+        kids_dropdown.classList.add('dropdown-inactive');
+        kids_dropdown.classList.remove('dropdown-active');
+        arrowKids.classList.toggle('arrow-animate');
+    }
+
     women_dropdown_list.forEach((elem,index) => {
         if(elem.style.animation){
             elem.style.animation = "";
@@ -141,6 +165,18 @@ kids.addEventListener('click', (event) => {
     }else if(kids_dropdown.classList.contains('dropdown-inactive')){
         kids_dropdown.classList.add('dropdown-active');
         kids_dropdown.classList.remove('dropdown-inactive');
+    }
+
+    if(women_dropdown.classList.contains('dropdown-active')){
+        women_dropdown.classList.add('dropdown-inactive');
+        women_dropdown.classList.remove('dropdown-active');
+        arrowWomen.classList.toggle('arrow-animate');
+    }
+
+    if(men_dropdown.classList.contains('dropdown-active')){
+        men_dropdown.classList.add('dropdown-inactive');
+        men_dropdown.classList.remove('dropdown-active');
+        arrowMen.classList.toggle('arrow-animate');
     }
 
     kids_dropdown_list.forEach((elem,index) => {
