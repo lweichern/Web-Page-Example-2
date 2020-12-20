@@ -14,5 +14,7 @@ app.get('/men-fashion', (req, res) => {
     res.render('men-fashion');
 });
 
-app.listen('3100');
-console.log('listening to port 3100');
+let port = Number(process.env.PORT || 3000);
+
+app.listen(port);
+// console.log('listening to port 3100');
