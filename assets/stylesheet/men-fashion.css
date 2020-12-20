@@ -31,3 +31,54 @@
     flex-direction: column;
     align-items: center;
 }
+
+.background-text{
+    position: absolute;
+    z-index: -10;
+}
+
+
+/* Items list */
+
+.item-cards{
+    margin-top: 40px;
+    position: absolute;
+}
+
+.item-cards ul{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.item-cards ul li{
+    list-style: none;
+}
+
+.items{
+    padding: 20px;
+    /* border: 1px solid black; */
+    /* Glassmorphism */
+    background: rgba(255, 255, 255, 0.3535);
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+    backdrop-filter: blur( 20px );
+    -webkit-backdrop-filter: blur( 5px );
+    border-radius: 12px;
+}
+
+.item-pics{
+    width: 300px;
+    height: 300px;
+}
+
+.item-details{
+    display: flex;
+    justify-content: space-between;
+}
+
+.add-to-cart, .buy-now{
+    width: 100%;
+    text-align: center;
+    margin-top: 8px;
+}
